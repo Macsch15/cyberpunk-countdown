@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Countdown from 'react-countdown'
+import GlitchClip from 'react-glitch-effect/core/Clip'
 
 class App extends Component {
   render () {
@@ -9,13 +10,15 @@ class App extends Component {
       } else {
         return (
           <span>
-            <div>It's only</div>
+            <div>IT'S ONLY</div>
             <div>
-              <span className={'clock'}>{days}</span> days<br />
-              <span className={'clock'}>{hours}</span> hours<br />
-              <span className={'clock'}>{minutes}</span> minutes and <span className={'clock'}>{seconds}</span> seconds
+              <GlitchClip>
+                <span className={'clock'}>{days}</span> days<br />
+                <span className={'clock'}>{hours}</span> hours<br />
+                <span className={'clock'}>{minutes}</span> minutes and <span className={'clock'}>{seconds}</span> seconds
+              </GlitchClip>
             </div>
-            <div>until Cyberpunk 2077 is out!</div>
+            <div>UNTIL CYBERPUNK 2077 IS OUT!</div>
           </span>
         );
       }
