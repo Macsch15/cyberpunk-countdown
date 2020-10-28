@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+html, body {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Orbitron', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./img/cyberpunk.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.clock {
+  color: #F1E901;
+}
+
+@media (min-width: 576px) {
+  .countdown {
+    font-size: 3.3vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdown {
+    font-size: 3.3vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .countdown {
+    font-size: 1.3vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .countdown {
+    font-size: 1.3vw;
+  }
+}
+
+.cyberpunk-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cyberpunk-link a:hover {
+  color: #F1E901;
 }

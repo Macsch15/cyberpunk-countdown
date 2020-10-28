@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Countdown from 'react-countdown'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render () {
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+      if (completed) {
+        return 'Cyberpunk 2077 is out!';
+      } else {
+        return (
+          <span>
+            <div>It's only</div>
+            <div>
+              <span className={'clock'}>{days}</span> days<br />
+              <span className={'clock'}>{hours}</span> hours<br />
+              <span className={'clock'}>{minutes}</span> minutes and <span className={'clock'}>{seconds}</span> seconds
+            </div>
+            <div>until Cyberpunk 2077 is out!</div>
+          </span>
+        );
+      }
+    };
+
+    return (
+      <div className={'ml-5 countdown'}>
+        <Countdown date={'2077-12-10T00:00:00+00:00'} renderer={renderer} />
+        <div className={'mt-4 cyberpunk-link'}>
+          <a href={'https://twitter.com/CyberpunkGame'} rel={'nofollow noopener'}>@CyberpunkGame</a>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
